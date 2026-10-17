@@ -1,7 +1,7 @@
 ---
 permalink: /publications/2025-10-05-perception-bottleneck/
 title: "On the Perception Bottleneck of VLMs for Chart Understanding"
-category: "conference
+category: "conference"
 categories: []
 date: 2025-10-05
 venue: "Arxiv"
