@@ -36,6 +36,9 @@ jobs:
           cache-version: 0
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6.0.0
+        with:
+          # Enable GitHub Pages for this repo if it isn't already enabled
+          enablement: true
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
@@ -45,8 +48,7 @@ jobs:
         uses: actions/upload-pages-artifact@v5.0.0
 
   # Deployment job
-  deploy:
-    environment:
+  environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
